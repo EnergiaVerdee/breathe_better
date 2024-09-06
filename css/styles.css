@@ -1,0 +1,210 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Banner Principal */
+.banner {
+    background-image: url('../images/aire.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* Mensaje de Bienvenida */
+.welcome {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 32px;
+}
+
+.welcome p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Botones de Navegación Rápida */
+.quick-nav {
+    background-color: #e0e0e0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-buttons .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #45a049;
+}
+
+/* Noticia Destacada */
+.featured-news {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-news h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.featured-news article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-news h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.featured-news p {
+    font-size: 16px;
+    color: #666;
+}
+
+.featured-news .read-more {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.featured-news .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animación para el Banner Principal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner {
+    background: linear-gradient(180deg, #0000008c 0%, #0000008c 100% ), url('../images/aire.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1.5s ease-out; /* Añadimos la animación */
+}
+
+.banner h1, .banner p {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Animación de Botones de Navegación Rápida */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quick-nav .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición en hover */
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+}
+
+.quick-nav .btn:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.quick-nav .btn:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.quick-nav .btn:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.quick-nav .btn:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.quick-nav .btn:hover {
+    background-color: #45a049;
+    transform: translateY(-5px); /* Efecto de subida en hover */
+}
+
+/* Animación para Noticia Destacada */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.featured-news article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: zoomIn 1.2s ease forwards;
+    animation-delay: 1.2s;
+}
+

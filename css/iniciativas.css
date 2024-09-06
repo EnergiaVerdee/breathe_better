@@ -1,0 +1,114 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Iniciativas Locales */
+.local-initiatives {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.local-initiatives h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Categorías de Iniciativas */
+.initiatives-category {
+    margin-bottom: 40px;
+}
+
+.initiatives-category h3 {
+    font-size: 28px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Lista de Iniciativas */
+.initiative-list, .event-list, .volunteer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.initiative-item, .event-item, .volunteer-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.initiative-item h4, .event-item h4, .volunteer-item h4 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.initiative-item p, .event-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Animación hover para las tarjetas */
+.initiative-item:hover, .event-item:hover, .volunteer-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .initiative-list, .event-list, .volunteer-list {
+        gap: 15px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+p  {
+    color: #fff;
+}

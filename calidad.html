@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad del Aire</title>
+    <link rel="stylesheet" href="./css/calidad.css">
+</head>
+<body>
+    <!-- Header de la Página -->
+    <header>
+        <div class="banner">
+            <h1>Calidad del Aire en Tiempo Real</h1>
+            <p>Monitoreo de las estaciones y datos actualizados para nuestra ciudad.</p>
+        </div>
+    </header>
+
+    <!-- Mapa Interactivo -->
+    <section class="air-quality-map">
+        <h2>Mapa de Calidad del Aire</h2>
+        <div id="map">
+            <!-- El mapa interactivo será insertado aquí (por ejemplo, usando una API como Leaflet.js o Google Maps) -->
+            <p>Mapa interactivo mostrando estaciones de monitoreo.</p>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <!-- Hoja de estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        // Inicializar el mapa
+        var map = L.map('map').setView([-8.110564, -79.026691], 13); // Coordenadas iniciales y nivel de zoom
+    
+        // Capa de mapas de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        // Añadir un marcador de ejemplo (puedes agregar más)
+        L.marker([-8.110564, -79.026691]).addTo(map)
+            .bindPopup('Esta es una estación de monitoreo.')
+            .openPopup();
+    </script>
+
+    <!-- Datos en Tiempo Real -->
+    <section class="real-time-data">
+        <h2>Datos en Tiempo Real</h2>
+        <div class="data-grid">
+            <div class="data-box">
+                <h3>PM2.5</h3>
+                <p id="pm25">15 µg/m³</p> <!-- Ejemplo de un valor en tiempo real -->
+            </div>
+            <div class="data-box">
+                <h3>PM10</h3>
+                <p id="pm10">30 µg/m³</p>
+            </div>
+            <div class="data-box">
+                <h3>O3</h3>
+                <p id="ozone">20 ppb</p>
+            </div>
+            <div class="data-box">
+                <h3>NO2</h3>
+                <p id="no2">25 ppb</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historial de Datos -->
+    <section class="historical-data">
+        <h2>Historial de Datos</h2>
+        <p>Selecciona un rango de fechas para ver el historial de calidad del aire:</p>
+        <input type="date" id="startDate">
+        <input type="date" id="endDate">
+        <button id="viewData">Ver Datos Históricos</button>
+
+        <div id="historical-chart">
+            <!-- Aquí se puede insertar un gráfico dinámico con los datos históricos (puedes usar librerías como Chart.js) -->
+            <p>Gráfico con datos históricos (PM2.5, PM10, O3, NO2, etc.).</p>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Breathe Better. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./js/calidad.js"></script>
+</body>
+</html>
